@@ -1,7 +1,8 @@
 from django.urls import path
-from . import views
+from .views import image_gallery
+from django.conf import settings
+from django.conf.urls.static import static
 
-urlpatterns=[
-    path('', views.index, name='index'),
-    path('about', views.about, name='about'),
-]
+urlpatterns = [
+    path('gallery/', image_gallery, name='image_gallery'),
+] + static(settings.MEDIA_URL, document_root=settings.MEDIA_ROOT)

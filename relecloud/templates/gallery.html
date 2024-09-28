@@ -45,7 +45,7 @@
         }
     </style>
 </head>
-<body>
+
 
 <header>
     <h1>Bienvenido a Mi Página</h1>
@@ -58,17 +58,14 @@
 </nav>
 
 <section>
-    <h2>Sección Principal</h2>
-    <h3>Alicia, eres demasiado bonita e increible</h3>
+    <h2>Alicia, eres demasiado bonita e increible</h2>
     <h3>Un regalito <3:</h3>
-    {% comment %} <img style="max-width:40%; margin-bottom:100px;" src="{% static 'img/img_1.jpeg' %}"> {% endcomment %}
-
-    {% comment %} {% for image in images %}
-        <img src="{{ STATIC_URL }}{{ image }}" alt="{{ image }}" style="width: 300px; height: auto; margin: 10px;">
-    {% endfor %} {% endcomment %}
-
-    <img src="{{ STATIC_URL }}img/img_1.jpeg" alt="Logo">
-
+    <div>
+        {% for image in images %}
+        <img src="{{ MEDIA_URL }}{{ image }}" alt="{{ image }}" style="width: 300px; height: auto; margin: 10px;">
+    {% endfor %}
+    
+    </div>
 
 </section>
 
