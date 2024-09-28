@@ -118,8 +118,10 @@ USE_TZ = True
 
 STATIC_URL = 'static/'
 
+
 # Directorio donde Django encontrará los archivos estáticos en tu proyecto
-STATICFILES_DIRS = ['project/static/']  # Asegúrate de tener una carpeta 'static' en tu proyecto
+STATICFILES_DIRS = ['project/static_deb/']  # Asegúrate de tener una carpeta 'static' en tu proyecto
+STATIC_ROOT = 'project/static/'  # Define una carpeta donde se recopilarán los archivos estáticos en producción
 
 
 # Default primary key field type
