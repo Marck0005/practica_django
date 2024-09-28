@@ -118,6 +118,10 @@ USE_TZ = True
 
 STATIC_URL = 'static/'
 
+# Directorio donde Django encontrará los archivos estáticos en tu proyecto
+STATICFILES_DIRS = ['project/static/']  # Asegúrate de tener una carpeta 'static' en tu proyecto
+
+
 # Default primary key field type
 # https://docs.djangoproject.com/en/5.1/ref/settings/#default-auto-field
 
