@@ -1,70 +1,13 @@
-<!DOCTYPE html>
-<html lang="es">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Mi Página de Inicio</title>
-    <style>
-        body {
-            font-family: Arial, sans-serif;
-            background-color: #f4f4f4;
-            color: #333;
-            margin: 0;
-            padding: 0;
-        }
-        header {
-            background-color: #4CAF50;
-            color: white;
-            padding: 1rem;
-            text-align: center;
-        }
-        nav {
-            margin: 1rem;
-            text-align: center;
-        }
-        nav a {
-            margin: 0 1rem;
-            text-decoration: none;
-            color: #4CAF50;
-        }
-        section {
-            margin: 2rem;
-            padding: 1rem;
-            background-color: white;
-            border-radius: 5px;
-            box-shadow: 0 0 10px rgba(0,0,0,0.1);
-        }
-        footer {
-            text-align: center;
-            padding: 1rem;
-            background-color: #4CAF50;
-            color: white;
-            position: fixed;
-            bottom: 0;
-            width: 100%;
-        }
-    </style>
-</head>
-<body>
+{% extends 'base.html' %}
 
-<header>
-    <h1>Bienvenido a Mi Página</h1>
-</header>
+{% block title %}Inicio - Mi Sitio Web{% endblock %}
 
-<nav>
-    <a href="#inicio">Inicio</a>
-    <a href="#servicios">Servicios</a>
-    <a href="#contacto">Contacto</a>
-</nav>
-
-<section>
-    <h2>Sección Principal</h2>
-    <p>Este es el contenido principal de la página de inicio.</p>
-</section>
-
-<footer>
-    <p>&copy; 2024 Mi Página. Todos los derechos reservados.</p>
-</footer>
-
-</body>
-</html>
+{% block content %}
+    <div class="jumbotron">
+        <h1 class="display-4">¡Bienvenido a Mi Sitio Web con Bootstrap!</h1>
+        <p class="lead">Este es el contenido de la página de inicio, utilizando Bootstrap para darle un estilo moderno.</p>
+        <hr class="my-4">
+        <p>Puedes personalizar fácilmente este sitio utilizando el poder de Bootstrap y Django.</p>
+        <a class="btn btn-primary btn-lg" href="#" role="button">Aprende más</a>
+    </div>
+{% endblock %}
