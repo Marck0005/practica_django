@@ -1,0 +1,30 @@
+{% extends 'base.html' %}
+
+{% block title %}Destinos - Relecloud{% endblock %}
+
+{% block content %}
+<div class="jumbotron text-center mb-4">
+    <h1 class="display-4 mb-2">¡Elige uno de nuestros destinos!</h1>
+    <p class="lead">Descubre lugares increíbles alrededor del universo</p>
+    <a href="/destination/create" class="btn btn-outline-secondary btn-lg ">Añadir destino</a>
+</div>
+
+<div class="container">
+    <div class="row">
+        {% for destination in destinations %}
+            <div class="col-md-4 mb-4">
+                <div class="card shadow-sm h-100">
+                    {% comment %} <img src="{{ destination.image_url }}" class="card-img-top" alt="{{ destination.name }}"> {% endcomment %}
+                    <div class="card-body">
+                        <h3 class="card-title">{{ destination.name }}</h3>
+                        <p class="card-text">{{ destination.description }}</p>
+                    </div>
+                    <div class="card-footer text-center">
+                        <a href="{% url 'destination_detail' destination.id %}" class="btn btn-primary">Ver más</a>
+                    </div>
+                </div>
+            </div>
+        {% endfor %}
+    </div>
+</div>
+{% endblock %}

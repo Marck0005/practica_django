@@ -1,0 +1,21 @@
+{% extends 'base.html' %}
+
+{% block title %}Acerca de - Relecloud{% endblock %}
+
+{% block content %}
+    <div class="container mt-5">
+        <div class="row">
+            <div class="col-md-3 text-center">
+                <a href="/destination/{{destination.id}}/update" class="btn btn-outline-secondary btn-lg ">Editar destino</a>
+                <a href="/destination/{{destination.id}}/delete" class="btn btn-outline-secondary btn-lg ">Eliminar destino</a>
+
+            </div>            
+            <div class="col-md-7 text-center">
+                <h1 class="display-4">{{ destination.name }}</h1>
+                <p class="lead">{{ destination.description }}</p>
+                <a href="/destinations" class="btn btn-outline-secondary btn-lg mt-4">Volver a Destinos</a>
+            </div>
+        </div>
+    </div>
+{% endblock %}
+

@@ -1,0 +1,19 @@
+{% extends 'base.html' %}
+{% load crispy_forms_tags %}
+
+{% block title %}Fromulario - Relecloud{% endblock %}
+
+{% block content %}
+
+
+<form method = "post">
+    {% csrf_token %}
+    {{form.as_p}}
+    <p>¿Seguro que quieres borrar {{destination.name}}?</p>
+
+    {% comment %} <button type = "submit" class="btn btn-primary" value="Confirm"> {% endcomment %}
+    <button type = "submit" class="btn btn-primary">Confirm </button>
+
+</form>
+
+{% endblock %}
