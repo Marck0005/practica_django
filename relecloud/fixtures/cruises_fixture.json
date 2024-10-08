@@ -1,0 +1,57 @@
+[
+    {
+        "model": "relecloud.cruise",
+        "pk": 1,
+        "fields": {
+            "code": "LUNA-abc12345",
+            "start_date": "2024-01-01",
+            "duration": 5, 
+            "generated_code_check": false,
+            "destination": 1 
+        }
+    },
+    {
+        "model": "relecloud.cruise",
+        "pk": 2,
+        "fields": {
+            "code": "MARTE-def67890",
+            "start_date": "2024-02-10",
+            "duration": 14, 
+            "generated_code_check": false,
+            "destination": 2  
+        }
+    },
+    {
+        "model": "relecloud.cruise",
+        "pk": 3,
+        "fields": {
+            "code": "TITAN-ghijklmn",
+            "start_date": "2024-03-15",
+            "duration": 30,  
+            "generated_code_check": false,
+            "destination": 4  
+        }
+    },
+    {
+        "model": "relecloud.cruise",
+        "pk": 4,
+        "fields": {
+            "code": "EUROPA-opqrstuv",
+            "start_date": "2024-04-20",
+            "duration": 30,  
+            "generated_code_check": false,
+            "destination": 5  
+        }
+    },
+    {
+        "model": "relecloud.cruise",
+        "pk": 5,
+        "fields": {
+            "code": "JUPITER-wxyz1234",
+            "start_date": "2024-05-25",
+            "duration": 60,  
+            "generated_code_check": false,
+            "destination": 3  
+        }
+    }
+]

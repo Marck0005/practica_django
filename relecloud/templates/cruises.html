@@ -1,0 +1,33 @@
+{% extends 'base.html' %}
+
+{% block title %}Cruceros - Relecloud{% endblock %}
+
+{% block content %}
+<div class="jumbotron text-center mb-4">
+    <h1 class="display-4 mb-2">¡Elige uno de nuestros cruceros!</h1>
+    <p class="lead">Descubre lugares increíbles alrededor del universo</p>
+    {% comment %} <a href="/destination/create" class="btn btn-outline-secondary btn-lg ">Añadir destino</a> {% endcomment %}
+</div>
+
+<div class="container">
+    <div class="row">
+        {% for cruise in cruises %}
+        <div class="col-md-4 mb-4">
+            <ul class="list-group shadow-sm h-100">
+                {% comment %} <img src="{{ destination.image_url }}" class="card-img-top" alt="{{ destination.name }}"> {% endcomment %}
+                
+                <!-- Itera sobre los cruceros y los muestra en la lista -->
+                <li class="list-group-item">
+                    <h3>{{ cruise.code }}</h3>
+                    <p>{{ cruise.destination }} - {{cruise.start_date}}</p>
+                    <div class="text-center">
+                        {% comment %} <a href="{% url 'cruise_detail' cruise.id %}" class="btn btn-primary">Ver más</a> {% endcomment %}
+                    </div>
+                </li>
+            </ul>
+        </div>
+        
+        {% endfor %}
+    </div>
+</div>
+{% endblock %}

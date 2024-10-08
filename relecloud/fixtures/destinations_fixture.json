@@ -1,0 +1,47 @@
+[
+    {
+        "model": "relecloud.destination",
+        "pk": 1,
+        "fields": {
+            "name": "Luna",
+            "code_dest": "LUN",
+            "description": "Un emocionante viaje a la Luna, nuestro satélite natural."
+        }
+    },
+    {
+        "model": "relecloud.destination",
+        "pk": 2,
+        "fields": {
+            "name": "Marte",
+            "code_dest": "MAR",
+            "description": "Explora el planeta rojo en un viaje interplanetario inolvidable."
+        }
+    },
+    {
+        "model": "relecloud.destination",
+        "pk": 3,
+        "fields": {
+            "name": "Júpiter",
+            "code_dest": "JUP",
+            "description": "Descubre los misterios de Júpiter y sus impresionantes lunas."
+        }
+    },
+    {
+        "model": "relecloud.destination",
+        "pk": 4,
+        "fields": {
+            "name": "Titán",
+            "code_dest": "TIT",
+            "description": "Visita Titán, la luna de Saturno, famosa por sus lagos de metano."
+        }
+    },
+    {
+        "model": "relecloud.destination",
+        "pk": 5,
+        "fields": {
+            "name": "Europa",
+            "code_dest": "EUR",
+            "description": "Explora Europa, la luna de Júpiter, en busca de vida bajo su hielo."
+        }
+    }
+]
