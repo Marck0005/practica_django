@@ -9,7 +9,9 @@
         <li class="list-group-item"><strong>Fecha de Inicio:</strong> {{ cruise.start_date }}</li>
         <li class="list-group-item"><strong>Duración:</strong> {{ cruise.duration }} días</li>
         <li class="list-group-item"><strong>Fecha de Finalización:</strong> {{ cruise.end_date }}</li>
-        <li class="list-group-item"><strong>Destino:</strong> {{ cruise.destination }}</li>
+        <li class="list-group-item"><strong>Destino:</strong>     <a href="{% url 'destination_detail' cruise.destination.id %}" class="text-decoration-none">
+            {{ cruise.destination.name }}
+        </a></li>
     </ul>
     <a href="{% url 'cruises' %}" class="btn btn-secondary mt-3">Volver a la lista de cruceros</a>
 </div>
