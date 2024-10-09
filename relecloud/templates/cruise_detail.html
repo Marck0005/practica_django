@@ -1,0 +1,16 @@
+{% extends 'base.html' %}
+
+{% block title %}Detalle del Crucero - {{ cruise.code }}{% endblock %}
+
+{% block content %}
+<div class="container mt-4">
+    <h1>Detalles del Crucero: {{ cruise.code }}</h1>
+    <ul class="list-group">
+        <li class="list-group-item"><strong>Fecha de Inicio:</strong> {{ cruise.start_date }}</li>
+        <li class="list-group-item"><strong>Duración:</strong> {{ cruise.duration }} días</li>
+        <li class="list-group-item"><strong>Fecha de Finalización:</strong> {{ cruise.end_date }}</li>
+        <li class="list-group-item"><strong>Destino:</strong> {{ cruise.destination }}</li>
+    </ul>
+    <a href="{% url 'cruises' %}" class="btn btn-secondary mt-3">Volver a la lista de cruceros</a>
+</div>
+{% endblock %}

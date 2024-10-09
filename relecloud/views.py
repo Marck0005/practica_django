@@ -20,6 +20,11 @@ def destinations(request):
     all_destinations = models.Destination.objects.all()
     return render(request, 'destinations.html', {'destinations': all_destinations})
 
+class CruiseDetailView(generic.DetailView):
+    template_name = "cruise_detail.html"
+    model = models.Cruise
+    contex_object_name = 'cruise'
+    
 class DestinationDetailView(generic.DetailView):
     template_name = "destination_detail.html"
     model = models.Destination

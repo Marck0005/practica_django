@@ -15,13 +15,12 @@
             <div class="col-md-4 mb-4">
                 <div class="card shadow-sm h-100">
                     {% comment %} <img src="{{ destination.image_url }}" class="card-img-top" alt="{{ destination.name }}"> {% endcomment %}
+                    <a href="{% url 'destination_detail' destination.id %}" class="text-decoration-none" style="color: black;"> 
                     <div class="card-body">
-                        <h3 class="card-title">{{ destination.name }}</h3>
+                        <h3 class="text-center card-title">{{ destination.name }}</h3>
                         <p class="card-text">{{ destination.description }}</p>
                     </div>
-                    <div class="card-footer text-center">
-                        <a href="{% url 'destination_detail' destination.id %}" class="btn btn-primary">Ver más</a>
-                    </div>
+                </a>
                 </div>
             </div>
         {% endfor %}

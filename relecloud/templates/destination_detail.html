@@ -1,35 +1,42 @@
 {% extends 'base.html' %}
 
-{% block title %}Acerca de - Relecloud{% endblock %}
+{% block title %}Destino - Relecloud{% endblock %}
 
 {% block content %}
-    <div class="container mt-5">
-        <div class="row">
-            <div class="col-md-3 text-center">
-                <a href="/destination/{{destination.id}}/update" class="btn btn-outline-secondary btn-lg ">Editar destino</a>
-                <a href="/destination/{{destination.id}}/delete" class="btn btn-outline-secondary btn-lg ">Eliminar destino</a>
-            </div>            
-            <div class="col-md-7 text-center">
-                <h1 class="display-4">{{ destination.name }}</h1>
-                <p class="lead">{{ destination.description }}</p>
-                <a href="/destinations" class="btn btn-outline-secondary btn-lg mt-4">Volver a Destinos</a>
-
-                <!-- Mostrar los cruceros asociados al destino -->
-                <div class="mt-5">
-                    <h2 class="mb-4">Cruceros disponibles</h2>
-                    {% if destination.cruises.all %}
-                        <ul class="list-group">
-                            {% for cruise in destination.cruises.all %}
-                                <li class="list-group-item">
-                                    <strong>Código del Crucero:</strong> {{ cruise.code }}
-                                </li>
-                            {% endfor %}
-                        </ul>
-                    {% else %}
-                        <p>No hay cruceros disponibles para este destino.</p>
-                    {% endif %}
+<div class="container mt-5">
+    <div class="row">
+        <div class="col-md-3 text-center">
+            <a href="/destination/{{ destination.id }}/update" class="btn btn-outline-secondary btn-lg">Editar destino</a>
+            <a href="/destination/{{ destination.id }}/delete" class="btn btn-outline-secondary btn-lg">Eliminar destino</a>
+            <a href="/destinations" class="btn btn-outline-secondary btn-lg mt-4">Volver a Destinos</a>
+        </div>
+        <div class="col-md-7">
+            <div class="card mb-4 shadow-sm">
+                <div class="card-body text-center">
+                    <h1 class="display-4">{{ destination.name }}</h1>
+                    <p class="lead">{{ destination.description }}</p>
                 </div>
+            </div>
+
+            <!-- Mostrar los cruceros asociados al destino -->
+            <div class="mt-5">
+                <h2 class="mb-4">Cruceros disponibles</h2>
+                {% if destination.cruises.all %}
+                    <ul class="list-group">
+                        {% for cruise in destination.cruises.all %}
+                            <li class="list-group-item">
+                                <strong>Código del Crucero:</strong> 
+                                <a href="{% url 'cruise_detail' cruise.id %}" class="text-decoration-none">
+                                    {{ cruise.code }}
+                                </a>
+                            </li>
+                        {% endfor %}
+                    </ul>
+                {% else %}
+                    <p>No hay cruceros disponibles para este destino.</p>
+                {% endif %}
             </div>
         </div>
     </div>
+</div>
 {% endblock %}
